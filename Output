@@ -1,0 +1,63 @@
+SQL> select * from product;
+
+no rows selected
+
+SQL> insert into product values(101,'pen',10);
+
+1 row created.
+
+SQL> insert into product values(102,'notebook',50);
+
+1 row created.
+
+SQL> insert into product values(103,'charger',500);
+
+1 row created.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> select * from product;
+
+       PID PNAME                     PRICE
+---------- -------------------- ----------
+       101 pen                       50
+       102 Mobile                    40000
+       
+
+SQL> @"C:\Users\System05\Desktop\Practicals\DBMS practical\pract-7 cursor\implicit.sql"
+
+PL/SQL procedure successfully completed.
+
+SQL> select * from product;
+
+       PID PNAME                     PRICE
+---------- -------------------- ----------
+       101 pen                       50
+       102 Mobile                    40000
+       103 gaming Mobile             70000      
+
+SQL> set serveroutput on
+SQL> @"C:\Users\System05\Desktop\Practicals\DBMS practical\pract-7 cursor\implicit.sql"
+ID: 101, Name: pen, Price: 50
+ID: 102, Name: Mobile, Price: 40000
+ID: 103, Name: gaming Mobile, Price: 70000
+
+PL/SQL procedure successfully completed.
+
+SQL> @"C:\Users\System05\Desktop\Practicals\DBMS practical\pract-7 cursor\implicit.sql"
+prices update for products below 50000.
+
+PL/SQL procedure successfully completed.
+
+SQL> select * from product;
+
+       PID PNAME                     PRICE
+---------- -------------------- ----------
+       101 pen                       50
+       102 Mobile                    40000
+
+SQL> commit;
+
+Commit complete.
