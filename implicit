@@ -1,5 +1,5 @@
 BEGIN
-insert into product (pid, pname, price) values (102, 'laptop', 40000.00);
+insert into product (pid, pname, price) values (102, 'Mobile ', 40000.00);
 
 DBMS_OUTPUT.PUT_LINE('Rows inserted: ' || SQL%ROWCOUNT);
 END;
